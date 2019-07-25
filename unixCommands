@@ -1,0 +1,34 @@
+Convert from .txt to pdf file using linux command
+    sh => enscript -B -fCourier7 -o testfile.ps testfile.txt
+    sh => ps2pdf testfile.ps testfile.pdf	
+	
+	sh =>/usr/bin/enscript -r -B -fCourier8 -o fullpatch/filename.ps fullpatch/filename.txt
+	sh =>/usr/bin/ps2pdf fullpatch/filename.ps fullpatch/filename.pdf
+	sh =>/bin/rm -rf fullpatch/*.ps	
+
+How to open or Untar a "tar.gz" file in Linux or Unix:
+	tar -C /home/t24/bwkianda -zxvf backup.t24bwkianda.at.20170331.mockrun3.20170330.aftercif.tar.gz
+
+How to compress to "tar.gz" in linux
+	tar -czvf archive.tar.gz /usr/local/something
+	tar -czvf backup.BWKI.t24prod.20170505.DM.PRK.CHEQUE.cob.tar.gz /home/t24/prod
+	"/usr/local/something" folder which is compressed
+
+Linux - grep - search character / string in any path / file
+	grep -R "FT-CHQ.NO.SIX" /home/t24/bss-fdsdev/bnk.run/source/fds
+	grep -rnw '/path/to/somewhere/' -e 'pattern'
+	grep -C 3 'pattern' README.txt
+	exclude character that match
+	ls -lr | grep -v -F '$' | grep -v I_
+	delete file from ls but '$' and 'I_' files
+	ls | grep -v -F '$' | grep -v I_ | xargs rm
+	delete file from parent directory to bak directory
+	ls -d bak/* | grep -v -F '$' | grep -v I_ | xargs rm
+	
+Send email using sendEmail.pl
+	/home/hcla/scripts/sendEmail.pl -u "Test mail from shell on `date`" -m "Hi All, \n \n The below environments login failure count is reset, please login now. \n \n \n The below invalid usernames have been specified in the file, please verify and try again. \n \n \n Thanks, \n Alamsyah Rizki" -f "alamsyah.isroi@bankfab.com" -t "alamsyah.isroi@bankfab.com" "Runsi.Howthu@bankfab.com" -cc "alamsyah.isroi@bankfab.com" -s 172.20.10.151
+	sendEmail.pl -u "Test mail from shell on `date`" -m "Hi All, \n \n This is a test from sendEmail.pl script utilization. \n \n \n Thanks, \n Alamsyah Rizki" -f "alamsyah.isroi@bankfab.com" -t "alamsyah.isroi@bankfab.com" "Runsi.Howthu@bankfab.com" -cc "alamsyah.isroi@bankfab.com" -s 172.20.10.151
+	
+Find any file / folder
+	locate "your filename"
+	find . -name "your filename"
