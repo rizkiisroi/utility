@@ -27,8 +27,9 @@ Linux - grep - search character / string in any path / file
 	
 Send email using sendEmail.pl
 	/home/hcla/scripts/sendEmail.pl -u "Test mail from shell on `date`" -m "Hi All, \n \n The below environments login failure count is reset, please login now. \n \n \n The below invalid usernames have been specified in the file, please verify and try again. \n \n \n Thanks, \n Alamsyah Rizki" -f "alamsyah.isroi@bankfab.com" -t "alamsyah.isroi@bankfab.com" "Runsi.Howthu@bankfab.com" -cc "alamsyah.isroi@bankfab.com" -s 172.20.10.151
-	sendEmail.pl -u "Test mail from shell on `date`" -m "Hi All, \n \n This is a test from sendEmail.pl script utilization. \n \n \n Thanks, \n Alamsyah Rizki" -f "alamsyah.isroi@bankfab.com" -t "alamsyah.isroi@bankfab.com" "Runsi.Howthu@bankfab.com" -cc "alamsyah.isroi@bankfab.com" -s 172.20.10.151
-	
+	sendEmail.pl -u "[Validata_Deployment] `whoami` Deployment on `date`" -m "Hi All, \n \n Some deployments has been done through Validata on environment \n `whoami` \n `pwd` \n Hostname : `hostname` \n IpAdress : `ifconfig -a | grep inet | grep netmask | grep -v '127.0.0.1' | cut -c6-21` \n \n This email sent by sendEmail.pl script utilization. \n \n Thanks, \n Alamsyah Isroi" -f "alamsyah.isroi@bankfab.com" -t "alamsyah.isroi@bankfab.com" -cc "alamsyah.isroi@bankfab.com" -s 172.20.10.151
+
+
 Find any file / folder
 	locate "your filename"
 	find . -name "your filename"
